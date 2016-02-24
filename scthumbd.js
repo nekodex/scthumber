@@ -52,7 +52,7 @@ app.get('/thumb/*', thumber.thumbnail);
 app.get('/optim/*', thumber.optimize);
 app.get('/stats', thumber.get_stats);
 
-var server = app.listen(3000, function () {
+var server = app.listen(4001, function () {
   var port = server.address().port;
   console.log('scthumbd %s\nListening on port %s', process.env.npm_package_version, port);
 });
