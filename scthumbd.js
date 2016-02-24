@@ -48,7 +48,8 @@ var thumber = scThumber({
 app.get('/', function(req, res) {
   res.send(util.format("scthumbd %s\n", process.env.npm_package_version));
 })
-app.get('/thumbs/*', thumber.thumbs);
+app.get('/thumb/*', thumber.thumbnail);
+app.get('/optim/*', thumber.optimize);
 app.get('/stats', thumber.get_stats);
 
 var server = app.listen(3000, function () {
