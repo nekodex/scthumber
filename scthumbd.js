@@ -13,8 +13,9 @@ var thumber = scThumber({
       height: 250,
     },
     'cover@2x': {
-      width: 1800,
-      height: 500
+      width: 900,
+      height: 250,
+      pixelScale: 2
     },
     // Beatmap card thumbnail
     // 800*200 (@2x)
@@ -23,8 +24,9 @@ var thumber = scThumber({
       height: 100
     },
     'card@2x': {
-      width: 800,
-      height: 200
+      width: 400,
+      height: 100,
+      pixelScale: 2
     },
     // Beatmap list thumbnail
     // 160*100 (@2x)
@@ -33,8 +35,9 @@ var thumber = scThumber({
       height: 50
     },
     'list@2x': {
-      width: 160,
-      height: 100
+      width: 80,
+      height: 50,
+      pixelScale: 2
     },
   }
 });
