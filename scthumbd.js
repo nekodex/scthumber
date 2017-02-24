@@ -1,6 +1,7 @@
-var express = require('express');
-var util = require('util');
-var app = express();
+var express = require('express'),
+    cluster = require('cluster'),
+    colors = require('colors'),
+    util = require('util');
 
 var scThumber = require('./lib/scthumber');
 var thumber = scThumber({
@@ -42,14 +43,33 @@ var thumber = scThumber({
   }
 });
 
-app.get('/', function(req, res) {
-  res.send(util.format("scthumbd %s\n", process.env.npm_package_version));
-})
-app.get('/thumb/*', thumber.thumbnail);
-app.get('/optim/*', thumber.optimize);
-app.get('/stats', thumber.get_stats);
+const numCPUs = require('os').cpus().length;
+const port = 4001;
 
-var server = app.listen(4001, function () {
-  var port = server.address().port;
-  console.log('scthumbd %s\nListening on port %s', process.env.npm_package_version, port);
-});
+if (cluster.isMaster) {
+  console.log(`${'[m]'.red} ${'scthumbd %s'.yellow}`, process.env.npm_package_version);
+  console.log(`${'[m]'.red} Listening on port ${'%s'.green}...`, port);
+  console.log(`${'[m]'.red} Starting ${'%s'.green} workers...`, numCPUs);
+
+  for (let i = 0; i < numCPUs; i++) {
+    cluster.fork();
+  }
+
+  cluster.on('exit', (worker, code, signal) => {
+    console.log(`${'[m]'.red} worker ${worker.id} died, restarting`);
+    cluster.fork();
+  });
+} else {
+  var app = express();
+
+  app.get('/', function(req, res) {
+    res.send(util.format("scthumbd %s\n", process.env.npm_package_version));
+  })
+  app.get('/thumb/*', thumber.thumbnail);
+  app.get('/optim/*', thumber.optimize);
+  app.get('/stats', thumber.get_stats);
+
+  var server = app.listen(port);
+
+  console.log(`${'[w]'.magenta} Worker ${'%s'.green} started...`, cluster.worker.id);
+}

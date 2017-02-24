@@ -14,10 +14,13 @@ mozjpeg
 On a Debian/Ubuntu system:
 ```
 apt-get install build-essential pkg-config libcairo2-dev libjpeg-dev libvips-dev libgif-dev
+npm install # or yarn
 ```
 
 ## Configuration
+See `var thumber` in `scthumbd.js` for now...
 
+## Running
 ```
 npm run scthumbd
 ```
