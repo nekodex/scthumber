@@ -33,7 +33,7 @@
     "mozjpeg-stream": "^1.0.3",
     "request": "2.x",
     "send": "0.x",
-    "sharp": "^0.13.x",
+    "sharp": "^0.17.x",
     "smartcrop": "0.0.1"
   },
   "devDependencies": {

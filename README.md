@@ -13,7 +13,7 @@ mozjpeg
 
 On a Debian/Ubuntu system:
 ```
-apt-get install build-essential pkg-config libcairo2-dev libjpeg-dev libvips-dev libgif-dev
+apt-get install build-essential pkg-config libcairo2-dev libjpeg-dev libpng-dev libvips-dev libgif-dev nasm
 npm install # or yarn
 ```
 
