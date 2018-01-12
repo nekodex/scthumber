@@ -29,10 +29,10 @@
     "colors": "^1.1.2",
     "lockfile": "^1.0.1",
     "mkdirp": "0.x",
-    "moment": "1.7.x",
+    "moment": "2.x",
     "mozjpeg-stream": "^1.0.3",
     "request": "2.x",
-    "send": "0.x",
+    "send": "0.11.x",
     "sharp": "^0.17.x",
     "smartcrop": "0.0.1"
   },
