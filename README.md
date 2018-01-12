@@ -4,9 +4,11 @@ Image thumbnailing daemon utilizing [Smartcrop.js](https://github.com/jwagner/sm
 
 Originally forked from [connect-thumbs](https://github.com/inadarei/connect-thumbs) but has since gone in a different direction.
 
+(This is one of those ugly proof-of-concepts that ended up in production somehow.)
+
 ### Installing Dependencies
 
-smartcrop-thumber is dependent on:
+scthumber is dependent on:
 smartcrop-js
 vips
 mozjpeg
