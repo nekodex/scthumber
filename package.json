@@ -17,7 +17,7 @@
     "connect",
     "express"
   ],
-  "version": "0.6.2018011201",
+  "version": "0.6.2018022101",
   "repository": {
     "type": "git",
     "url": "git@github.com:nekodex/scthumber.git"
@@ -29,7 +29,7 @@
     "colors": "^1.1.2",
     "lockfile": "^1.0.1",
     "mkdirp": "0.x",
-    "moment": "2.x",
+    "moment": "^2.20.1",
     "mozjpeg-stream": "^1.0.3",
     "request": "2.x",
     "send": "0.11.x",
@@ -37,7 +37,7 @@
     "smartcrop": "0.0.1"
   },
   "devDependencies": {
-    "connect": "*",
+    "connect": "^3.6.6",
     "express": "^4.13.3"
   },
   "scripts": {
