@@ -7,8 +7,8 @@ var scThumber = require('./lib/scthumber');
 var thumber = scThumber({
   tmpCacheTTL: 0, // disable caching
   presets: {
-    // Beatmap page cover
-    // 1800*500 (@2x)
+    // Beatmap cover
+    // 900x250 (1800x500 @2x)
     'cover': {
       width: 900,
       height: 250,
@@ -19,7 +19,7 @@ var thumber = scThumber({
       pixelScale: 2
     },
     // Beatmap card thumbnail
-    // 800*200 (@2x)
+    // 400x100 (800x200 @2x)
     'card': {
       width: 400,
       height: 100
@@ -30,7 +30,7 @@ var thumber = scThumber({
       pixelScale: 2
     },
     // Beatmap list thumbnail
-    // 160*100 (@2x)
+    // 80x50 (160x100 @2x)
     'list': {
       width: 80,
       height: 50
