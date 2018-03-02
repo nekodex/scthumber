@@ -18,6 +18,17 @@ var thumber = scThumber({
       height: 250,
       pixelScale: 2
     },
+    // New slimmer beatmap cover
+    // 1920x360 (3840x720 @2x)
+    'slimcover': {
+      width: 1920,
+      height: 360,
+    },
+    'slimcover@2x': {
+      width: 1920,
+      height: 360,
+      pixelScale: 2
+    },
     // Beatmap card thumbnail
     // 400x100 (800x200 @2x)
     'card': {

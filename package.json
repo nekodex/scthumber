@@ -17,7 +17,7 @@
     "connect",
     "express"
   ],
-  "version": "0.6.2018022101",
+  "version": "0.6.2018030201",
   "repository": {
     "type": "git",
     "url": "git@github.com:nekodex/scthumber.git"
