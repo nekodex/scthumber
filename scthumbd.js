@@ -5,7 +5,6 @@ var express = require('express'),
 
 var scThumber = require('./lib/scthumber');
 var thumber = scThumber({
-  tmpCacheTTL: 0, // disable caching
   presets: {
     // Beatmap cover
     // 900x250 (1800x500 @2x)
