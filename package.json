@@ -25,20 +25,20 @@
   "main": "./index.js",
   "dependencies": {
     "async": "0.1.x",
-    "canvas": "^1.3.10",
-    "colors": "^1.1.2",
-    "lockfile": "^1.0.1",
+    "canvas": "^1.6.12",
+    "colors": "^1.3.2",
+    "lockfile": "^1.0.4",
     "mkdirp": "0.x",
-    "moment": "^2.20.1",
+    "moment": "^2.22.2",
     "mozjpeg-stream": "^1.0.3",
-    "request": "2.x",
-    "send": "0.11.x",
-    "sharp": "^0.17.x",
-    "smartcrop": "0.0.1"
+    "request": "^2.88.0",
+    "send": "^0.16.2",
+    "sharp": "^0.20.8",
+    "smartcrop": "^2.0.x"
   },
   "devDependencies": {
     "connect": "^3.6.6",
-    "express": "^4.13.3"
+    "express": "^4.16.3"
   },
   "scripts": {
     "scthumbd": "node scthumbd.js",
