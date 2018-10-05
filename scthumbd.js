@@ -53,15 +53,15 @@ var thumber = scThumber({
   }
 });
 
-const numCPUs = require('os').cpus().length;
+const workers = process.env.WORKERS || require('os').cpus().length;
 const port = 4001;
 
 if (cluster.isMaster) {
   console.log(`${'[m]'.red} ${'scthumbd %s'.yellow}`, process.env.npm_package_version);
   console.log(`${'[m]'.red} Listening on port ${'%s'.green}...`, port);
-  console.log(`${'[m]'.red} Starting ${'%s'.green} workers...`, numCPUs);
+  console.log(`${'[m]'.red} Starting ${'%s'.green} workers...`, workers);
 
-  for (let i = 0; i < numCPUs; i++) {
+  for (let i = 0; i < workers; i++) {
     cluster.fork();
   }
 
